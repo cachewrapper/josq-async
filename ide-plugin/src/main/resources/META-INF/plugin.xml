@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>org.cachewrapper.ideplugin</id>
+    <name>Async Method Support</name>
+    <version>1.0</version>
+    <vendor>Josq-Async</vendor>
+
+    <idea-version since-build="232.*"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor
+                implementationClass="org.cachewrapper.ideplugin.contributor.AsyncCompletionContributor"
+                language="JAVA"/>
+        <lang.psiAugmentProvider implementation="org.cachewrapper.ideplugin.provider.AsyncMethodAugmentProvider"/>
+
+    </extensions>
+</idea-plugin>
