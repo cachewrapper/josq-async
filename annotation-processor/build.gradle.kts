@@ -1,6 +1,8 @@
 plugins {
     id("java-library")
     id("com.github.johnrengelman.shadow") version "8.1.1"
+
+    id("maven-publish")
 }
 
 group = "org.cachewrapper"
@@ -30,6 +32,24 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            artifact(tasks.named("shadowJar").get())
+            groupId = "org.cachewrapper"
+            artifactId = "josq-async"
+            version = project.version.toString()
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
+}
+
