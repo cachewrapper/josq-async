@@ -24,7 +24,6 @@ import java.util.Set;
  * - Does not copy method modifiers like static; supports instance methods only in this simple example.
  * - Does not propagate checked exceptions (the generated lambda will rethrow unchecked only).
  */
-@AutoService(Processor.class)
 @SupportedAnnotationTypes("org.cachewrapper.annotation.method.Async")
 @SupportedSourceVersion(SourceVersion.RELEASE_17)
 public class AsyncProcessor extends AbstractProcessor {
