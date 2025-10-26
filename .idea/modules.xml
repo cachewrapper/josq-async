@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1302515605/josq-async.annotation-processor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1302515605/josq-async.annotation-processor.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/josq-async.ide-plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/josq-async.ide-plugin.main.iml" />
     </modules>
   </component>
 </project>
